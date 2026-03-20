@@ -1,0 +1,1292 @@
+:root {
+    --primary: #F15A24; /* El naranja de AURA */
+    --text: #333333;
+    --text-light: #666666;
+    --bg-light: #F9FAFB;
+    --white: #FFFFFF;
+    --border: #E5E7EB;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text);
+    background-color: var(--white);
+}
+
+
+
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* NAVBAR */
+.navbar {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.nav-flex { display: flex; justify-content: space-between; align-items: center; }
+
+.nav-links { display: flex; list-style: none; gap: 25px; align-items: center; }
+
+.nav-links a { text-decoration: none; color: var(--text); font-size: 14px; font-weight: 500; transition: 0.3s; }
+
+.nav-links a:hover { color: var(--primary); }
+
+/* BOTONES */
+.btn-primary { background: var(--primary); color: white !important; padding: 10px 20px; border-radius: 5px; font-weight: 600; }
+
+.btn-primary-large { background: var(--primary); color: white; padding: 15px 30px; border: none; border-radius: 5px; font-weight: 700; cursor: pointer; transition: 0.3s; }
+
+.btn-outline-large { background: white; color: var(--text); padding: 15px 30px; border: 1px solid var(--border); border-radius: 5px; font-weight: 700; cursor: pointer; margin-left: 10px; transition: 0.3s; }
+
+.btn-primary-large:hover, .btn-outline-large:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+/* HERO */
+.hero { padding: 80px 0; background: linear-gradient(to bottom, #fff, #fefefe); }
+
+.hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+
+h1 { font-family: 'Montserrat', sans-serif; font-size: 40px; line-height: 1.2; margin-bottom: 20px; }
+
+.hero-text p { font-size: 18px; color: var(--text-light); margin-bottom: 30px; max-width: 500px; }
+
+.hero-img img { width: 100%; border-radius: 15px; box-shadow: 20px 20px 60px rgba(0,0,0,0.05); }
+
+.tech-stack { text-align: center; margin-top: 60px; color: #999; font-size: 12px; font-weight: 600; border-top: 1px solid var(--border); padding-top: 30px; }
+
+/* SERVICES CARDS */
+.services { padding: 100px 0; background-color: var(--bg-light); }
+
+.section-title { text-align: center; font-size: 14px; letter-spacing: 2px; color: #999; margin-bottom: 50px; }
+
+.services-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+.service-card {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid var(--border);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 40px rgba(241, 90, 36, 0.1);
+}
+
+.icon-wrapper { color: var(--primary); margin-bottom: 20px; }
+
+.icon-wrapper i { width: 40px; height: 40px; }
+
+.service-card h3 { font-size: 14px; margin-bottom: 15px; font-weight: 700; }
+
+.service-card p { font-size: 13px; color: var(--text-light); line-height: 1.5; }
+
+/* CALCULATOR */
+.calculator-section { padding: 80px 0; }
+
+.calc-container { 
+    display: grid; 
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 30px; 
+    background: white; 
+    border-radius: 15px; 
+    overflow: hidden; 
+    border: 1px solid var(--border);
+}
+
+.calc-form { padding: 40px; }
+
+.calc-form h3 { font-size: 16px; margin-bottom: 25px; }
+
+.input-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 20px; }
+
+select { padding: 10px; border: 1px solid var(--border); border-radius: 5px; font-size: 13px; }
+
+.checkbox-row { display: flex; gap: 15px; font-size: 12px; margin-bottom: 30px; }
+
+.slider-box { margin-bottom: 30px; }
+
+.slider { width: 100%; accent-color: var(--primary); }
+
+.result { font-weight: 700; margin-bottom: 30px; font-size: 14px; }
+
+.result span { color: #2699A6; font-size: 20px; margin-left: 10px; }
+
+.form-footer { display: flex; gap: 10px; }
+
+.form-footer input { flex: 1; padding: 12px; border: 1px solid var(--border); border-radius: 5px; }
+
+/* VIDEO AREA */
+.calc-video { position: relative; }
+
+.video-thumb { height: 100%; position: relative; cursor: pointer; }
+
+.video-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+.play-overlay {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.play-overlay i { width: 60px; height: 60px; transition: 0.3s; }
+
+.play-overlay:hover i { transform: scale(1.1); color: var(--primary); }
+
+@media (max-width: 992px) {
+    .hero-grid, .services-grid, .calc-container { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+}
+
+/* --- HERO FULL SECTION --- */
+.hero-full {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Ocupa casi toda la pantalla */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    overflow: hidden;
+    color: white; /* Texto blanco para resaltar sobre fondo */
+}
+
+/* La imagen que ocupa todo el fondo */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Al fondo */
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Hace que la imagen no se deforme */
+    filter: brightness(0.7); /* Oscurece un poco la imagen */
+}
+
+/* Graduado para que el texto se lea mejor */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+    z-index: 2;
+}
+
+/* El contenido que flota encima */
+.hero-content-overlay {
+    position: relative;
+    z-index: 10; /* Por encima de la imagen y el overlay */
+}
+
+.hero-text-floating h1 {
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); /* Sombra para resaltar */
+}
+
+.hero-text-floating .highlight {
+    color: var(--primary); /* El naranja de AURA */
+}
+
+.hero-text-floating p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* --- BOTONES ESPECÍFICOS --- */
+.btn-outline-white {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+.btn-outline-white:hover {
+    background: white;
+    color: black;
+}
+
+/* Barra de tecnologías flotante al fondo del hero */
+.tech-bar-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    z-index: 15;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    .hero-text-floating h1 {
+        font-size: 2.2rem;
+    }
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .btn-outline-white {
+        margin-left: 0;
+    }
+}
+
+/* --- SECCIÓN SERVICIOS --- */
+.services-section {
+    padding: 100px 0;
+    background-color: #FFFFFF;
+}
+
+.section-badge {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #999999;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+/* Línea sutil debajo del título */
+.section-badge::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #EAEAEA;
+    margin: 15px auto 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas exactas */
+    gap: 25px;
+}
+
+.service-item {
+    background: #FFFFFF;
+    padding: 50px 30px;
+    border-radius: 12px;
+    border: 1px solid #F0F0F0; /* Borde casi imperceptible */
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: default;
+}
+
+/* --- ANIMACIÓN Y HOVER --- */
+.service-item:hover {
+    transform: translateY(-10px);
+    background: #FFFFFF;
+    border-color: rgba(241, 90, 36, 0.3); /* Brillo naranja sutil */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); /* Sombra elegante */
+}
+
+.service-icon {
+    color: #F15A24; /* Naranja AURA */
+    margin-bottom: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+    transform: scale(1.1);
+}
+
+.service-icon i {
+    width: 42px;
+    height: 42px;
+    stroke-width: 1.5px; /* Trazo fino para verse más formal */
+}
+
+.service-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.service-item p {
+    font-size: 0.85rem;
+    color: #777777;
+    line-height: 1.6;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 en tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+    }
+    .services-section {
+        padding: 60px 0;
+    }
+}
+
+/* --- CONTENEDOR AL 80% --- */
+.container-80 {
+    width: 80%; /* Ocupa el 80% del ancho de la pantalla */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.services-section {
+    padding: 120px 0; /* Más espacio vertical para formalidad */
+    background-color: #FFFFFF;
+}
+
+.section-badge {
+    text-align: center;
+    font-size: 1rem; /* Letras de sección un poco más grandes */
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: #BBB;
+    margin-bottom: 80px;
+}
+
+/* --- GRID Y CARDS --- */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.service-item {
+    background: #FFFFFF;
+    padding: 60px 40px; /* Padding interno generoso */
+    border-radius: 16px;
+    border: 1px solid #F2F2F2;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.service-item:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+    border-color: #EEE;
+}
+
+/* --- TIPOGRAFÍA MÁS GRANDE --- */
+.service-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem; /* Título más prominente */
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.service-item p {
+    font-size: 1rem; /* Texto de descripción más legible */
+    color: #666;
+    line-height: 1.6;
+}
+
+/* --- ICONOS DE COLORES --- */
+.service-icon {
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+.service-icon i {
+    width: 54px; /* Iconos más grandes */
+    height: 54px;
+    stroke-width: 1.8px;
+}
+
+/* Colores específicos por icono */
+.icon-blue i { color: #3E8EDE; stroke: #3E8EDE; }   /* Azul */
+.icon-purple i { color: #8B5CF6; stroke: #8B5CF6; } /* Violeta */
+.icon-orange i { color: #F15A24; stroke: #F15A24; } /* Naranja AURA */
+.icon-green i { color: #10B981; stroke: #10B981; }  /* Esmeralda */
+
+/* --- RESPONSIVO --- */
+@media (max-width: 1100px) {
+    .container-80 { width: 90%; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 650px) {
+    .services-grid { grid-template-columns: 1fr; }
+    .service-item { padding: 40px 20px; }
+}
+
+/* --- SECCIÓN PROCESO --- */
+.process-section {
+    padding: 100px 0;
+    background-color: #FDFDFD; /* Un blanco roto muy sutil para diferenciar de servicios */
+    border-top: 1px solid #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.process-timeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding: 40px 0;
+}
+
+/* Estilos de cada paso */
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.step-info {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #999;
+    margin-bottom: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Icono del paso activo */
+.step-info i {
+    width: 20px;
+    height: 20px;
+    color: #2699A6; /* Color azul/turquesa de la imagen */
+}
+
+/* Punto de la línea de tiempo */
+.step-marker {
+    width: 12px;
+    height: 12px;
+    background-color: #DDD;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Línea conectora entre puntos */
+.step-connector {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #EEE;
+    margin: 0 -5px; /* Ajuste para que toque los puntos */
+    transform: translateY(18.5px); /* Alineación vertical con el punto */
+}
+
+/* --- ESTADO ACTIVO (Resaltado en la imagen) --- */
+.process-step.active .step-info {
+    color: #111;
+    transform: translateY(-5px);
+}
+
+.process-step.active .step-marker {
+    background-color: #2699A6;
+    box-shadow: 0 0 0 5px rgba(38, 153, 166, 0.2);
+    width: 14px;
+    height: 14px;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 900px) {
+    .process-timeline {
+        flex-direction: column;
+        gap: 40px;
+        align-items: flex-start;
+        padding-left: 50px;
+    }
+
+    .process-step {
+        flex-direction: row-reverse;
+        gap: 20px;
+    }
+
+    .step-info {
+        margin-bottom: 0;
+        align-items: flex-start;
+    }
+
+    .step-connector {
+        width: 2px;
+        height: 40px;
+        flex-grow: 0;
+        margin: -40px 0 0 6px; /* Línea vertical en móvil */
+        transform: none;
+    }
+}
+
+/* --- SECCIÓN PROCESO ACTUALIZADA --- */
+.process-section {
+    padding: 120px 0;
+    background-color: #ffffff;
+}
+
+.process-timeline {
+    display: flex;
+    align-items: center; /* Alinea los puntos y líneas horizontalmente */
+    justify-content: center;
+    margin-top: 80px;
+    gap: 0; /* Controlamos el espacio con las líneas */
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 180px; /* Ancho fijo para que los textos largos no muevan la línea */
+}
+
+/* --- TEXTOS MÁS GRANDES --- */
+.step-info {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem; /* Aumentado de 0.85rem a 1rem */
+    font-weight: 700;
+    color: #BBBBBB;
+    margin-bottom: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+}
+
+/* --- CHECKS MÁS GRANDES --- */
+.step-check {
+    width: 32px !important; /* Aumentado considerablemente */
+    height: 32px !important;
+    color: #2699A6;
+    stroke-width: 2.5px; /* Más grueso para mayor impacto visual */
+}
+
+.step-marker {
+    width: 14px;
+    height: 14px;
+    background-color: #EEEEEE;
+    border-radius: 50%;
+    z-index: 2;
+    transition: all 0.4s ease;
+}
+
+/* --- LÍNEA CONECTORA --- */
+.step-line {
+    flex: 1;
+    max-width: 120px;
+    height: 2px;
+    background-color: #F0F0F0;
+    transform: translateY(22px); /* Ajuste preciso para alinear con el punto */
+}
+
+/* --- ESTADO ACTIVO --- */
+.process-step.active .step-info {
+    color: #111111;
+    transform: translateY(-5px);
+}
+
+.process-step.active .step-marker {
+    background-color: #2699A6;
+    box-shadow: 0 0 0 6px rgba(38, 153, 166, 0.15);
+    width: 16px;
+    height: 16px;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 1024px) {
+    .process-timeline {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20%;
+    }
+    
+    .process-step {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        width: 100%;
+        gap: 30px;
+    }
+
+    .step-info {
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+
+    .step-line {
+        width: 2px;
+        height: 50px;
+        max-width: 2px;
+        margin-left: 7px;
+        transform: none;
+    }
+}
+
+/* --- SECCIÓN MAPA Y UBICACIÓN --- */
+.location-section {
+    padding: 100px 0;
+    background-color: #F8F9FA; /* Gris muy tenue para contraste */
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* El contenido tiene más peso que el mapa */
+    gap: 60px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* --- ESTILO DEL MAPA --- */
+.location-map-box {
+    text-align: center;
+}
+
+.map-img {
+    max-width: 100%;
+    height: auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.05));
+    transition: transform 0.5s ease;
+}
+
+.location-map-box:hover .map-img {
+    transform: scale(1.05); /* Efecto zoom sutil */
+}
+
+/* --- TEXTO Y LOGOS --- */
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.location-text {
+    font-size: 1.25rem; /* Letras grandes como pediste */
+    color: #444;
+    font-weight: 400;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.brand-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.trust-logo {
+    height: 45px; /* Tamaño consistente para logos */
+    width: auto;
+    filter: grayscale(100%); /* Todos grises para formalidad */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.trust-logo:hover {
+    filter: grayscale(0%); /* Vuelven a color al pasar mouse */
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 900px) {
+    .location-grid {
+        grid-template-columns: 1fr; /* Una columna en tablets/móvil */
+        text-align: center;
+    }
+
+    .location-info {
+        align-items: center;
+    }
+
+    .brand-logos {
+        justify-content: center;
+    }
+}
+
+/* --- SECCIÓN UBICACIÓN Y BANNER --- */
+.location-section {
+    padding: 100px 0 60px 0;
+    background-color: #F8F9FA;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px; /* Espacio antes del banner */
+}
+
+/* --- ESTILO DE LOGOS ISO --- */
+.iso-logos {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.iso-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.iso-item img {
+    height: 60px; /* Un poco más grandes para que destaquen */
+    width: auto;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.iso-item:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.iso-item span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- BANNER PANORÁMICO (80%) --- */
+.location-banner-image {
+    width: 100%; /* Ocupa el 100% de su padre (que ya es el 80% de la web) */
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.location-banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la foto */
+    transition: transform 1s ease;
+}
+
+.location-banner-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Texto sutil sobre la imagen */
+.banner-overlay-text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    background: rgba(0,0,0,0.3);
+    padding: 8px 15px;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    .location-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .iso-logos {
+        justify-content: center;
+    }
+    .location-banner-image {
+        height: 250px;
+    }
+}
+
+
+/* --- SECCIÓN TESTIMONIOS --- */
+.testimonials-section {
+    padding: 120px 0;
+    background-color: #ffffff;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas al 50% cada una */
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.testimonial-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid #f2f2f2;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+    border-color: #eee;
+}
+
+/* Encabezado: Foto y Nombre */
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.client-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #f0f0f0;
+}
+
+.client-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 4px;
+}
+
+.client-company {
+    font-size: 0.9rem;
+    color: #999;
+    font-weight: 500;
+}
+
+/* Cuerpo: La Cita */
+.testimonial-body p {
+    font-size: 1.2rem; /* Letras un poco más grandes */
+    font-weight: 600;
+    color: #444;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+/* Resaltado del % en Naranja */
+.stat-highlight {
+    color: #F15A24; /* Naranja AURA */
+    font-weight: 800;
+    font-size: 1.4rem;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 900px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+    
+    .testimonial-card {
+        padding: 30px;
+    }
+}
+
+/* --- SECCIÓN TESTIMONIOS POTENCIADA --- */
+.testimonials-section {
+    padding: 140px 0; /* Más aire para que las tarjetas respiren */
+    background-color: #ffffff;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px; /* Más separación entre tarjetas */
+    margin-top: 80px;
+}
+
+/* Tarjetas más notorias */
+.testimonial-card {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 24px; /* Bordes más redondeados y modernos */
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); /* Sombra inicial sutil */
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.08); /* Sombra mucho más notoria al hover */
+    border-color: #F15A24; /* El borde se ilumina con el naranja AURA */
+}
+
+.testimonial-content {
+    display: flex;
+    align-items: center; /* Centrado vertical */
+    gap: 40px; /* Espacio entre foto y texto */
+}
+
+/* --- FOTOS DE PERFIL MÁS GRANDES --- */
+.avatar-column {
+    flex-shrink: 0;
+}
+
+.client-avatar-large {
+    width: 110px; /* Tamaño aumentado considerablemente */
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f9fafb;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- COLUMNA DE TEXTO --- */
+.text-column {
+    flex: 1;
+}
+
+.client-header {
+    margin-bottom: 15px;
+}
+
+.client-header h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem; /* Nombre más grande */
+    font-weight: 700;
+    color: #111;
+}
+
+.client-company {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    font-weight: 500;
+}
+
+.quote {
+    font-size: 1.3rem; /* Frase testimonial más impactante */
+    font-weight: 600;
+    color: #334155;
+    line-height: 1.4;
+    font-style: italic;
+    margin: 0;
+}
+
+.stat-highlight {
+    color: #F15A24;
+    font-weight: 800;
+    font-size: 1.6rem; /* El 80% resalta aún más */
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 1100px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .testimonial-content {
+        flex-direction: column; /* En móviles vuelve a ser vertical */
+        text-align: center;
+    }
+    .client-avatar-large {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+/* --- FOOTER ESTILO BOUTIQUE --- */
+.footer {
+    padding: 100px 0 40px 0;
+    background-color: #ffffff2d;
+    border-top: 1px solid #f2f2f2;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr; /* Columna de branding más ancha */
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+/* Columna de Branding */
+.branding p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.7;
+    margin: 25px 0;
+    max-width: 300px;
+}
+
+.footer-logo {
+    height: 35px;
+    width: auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #F15A24; /* Color de marca Aura */
+}
+
+/* Títulos y Enlaces */
+.footer-col h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #111;
+    margin-bottom: 25px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #F15A24;
+    padding-left: 5px;
+}
+
+/* Botón especial de contacto */
+.footer-btn {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 700;
+    color: #F15A24 !important;
+    border-bottom: 2px solid transparent;
+}
+
+.footer-btn:hover {
+    border-bottom-color: #F15A24;
+}
+
+/* Copyright Bottom */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 1px solid #f9f9f9;
+    color: #bbb;
+    font-size: 0.85rem;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal a {
+    text-decoration: none;
+    color: #bbb;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .branding p {
+        max-width: 100%;
+    }
+    .social-links {
+        justify-content: center;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* --- FOOTER DARK MODE --- */
+.footer-dark {
+    padding: 100px 0 40px 0;
+    background-color: #0F0F0F; /* Color oscuro profundo */
+    color: #FFFFFF;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+/* Branding y descripción */
+.footer-logo-white {
+    height: 35px;
+    filter: brightness(0) invert(1); /* Convierte el logo a blanco si es oscuro */
+    margin-bottom: 20px;
+}
+
+.footer-description {
+    font-size: 0.95rem;
+    color: #9CA3AF; /* Gris suave para que no canse la vista */
+    line-height: 1.7;
+    margin-bottom: 25px;
+    max-width: 320px;
+}
+
+/* Títulos de columna */
+.footer-col h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 15px;
+}
+
+.footer-col ul li a, .location-tag {
+    text-decoration: none;
+    color: #9CA3AF;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #F15A24; /* Naranja AURA resalta mucho sobre negro */
+}
+
+/* Botón y Social Links */
+.footer-btn-highlight {
+    color: #F15A24 !important;
+    font-weight: 700;
+    border-bottom: 1px solid #F15A24;
+    padding-bottom: 2px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #FFFFFF;
+    background: rgba(255, 255, 255, 0.05);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #F15A24;
+    transform: translateY(-3px);
+}
+
+/* Copyright Section */
+.footer-bottom-dark {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #6B7280;
+    font-size: 0.85rem;
+}
+
+.footer-legal a {
+    color: #6B7280;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.footer-legal a:hover {
+    color: #FFFFFF;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+    .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    .social-links { justify-content: center; }
+    .footer-bottom-dark { flex-direction: column; gap: 20px; }
+}
